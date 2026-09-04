@@ -4,9 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Qual viajante você é?</title>
-
+    <title>Qual personagem de Steven Universe você é?</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -14,50 +12,225 @@
 
     <main>
 
-        <h1>Qual tipo de viajante você é?</h1>
+        <h1>Qual personagem de Steven Universe você é?</h1>
+        <p>Responda às perguntas e descubra qual personagem combina com você!</p>
 
-        <p>Responda às perguntas e descubra!</p>
+        <section class="pergunta">
+            <h2>1. Você chega em uma festa onde não conhece quase ninguém. O que faz?</h2>
 
-
-       <section class="pergunta">
-
-            <h2>1. Qual destino você escolheria?</h2>
-
-            <button onclick="responder('aventura', 1, this)">
-                Montanha
+            <button onclick="responder('Steven', 1, this)">
+                Procuro alguém sozinho e puxo assunto.
             </button>
 
-            <button onclick="responder('relax', 1, this)">
-                Praia
+            <button onclick="responder('Amethyst', 1, this)">
+                Vou direto para a comida e começo a curtir.
             </button>
 
+            <button onclick="responder('Lapis', 1, this)">
+                Fico mais na minha observando tudo.
+            </button>
+
+            <button onclick="responder('Pearl', 1, this)">
+                Tento conhecer as pessoas aos poucos.
+            </button>
         </section>
 
 
         <section class="pergunta">
+            <h2>2. Seu melhor amigo está passando por um problema. Você...</h2>
 
-            <h2>2. O que você prefere fazer?</h2>
-
-           <button onclick="responder('aventura', 2, this)">
-                Fazer uma trilha
+            <button onclick="responder('Steven', 2, this)">
+                Faço de tudo para animá-lo.
             </button>
 
-            <button onclick="responder('relax', 2, this)">
-                Descansar
+            <button onclick="responder('Amethyst', 2, this)">
+                Tento fazê-lo rir com alguma coisa maluca.
             </button>
 
+            <button onclick="responder('Lapis', 2, this)">
+                Dou espaço, mas fico por perto.
+            </button>
+
+            <button onclick="responder('Pearl', 2, this)">
+                Penso em uma solução para ajudá-lo.
+            </button>
+        </section>
+
+
+        <section class="pergunta">
+            <h2>3. Qual dessas características combina mais com você?</h2>
+
+            <button onclick="responder('Steven', 3, this)">
+                Carinhoso(a) e empático(a)
+            </button>
+
+            <button onclick="responder('Amethyst', 3, this)">
+                Divertido(a) e espontâneo(a)
+            </button>
+
+            <button onclick="responder('Lapis', 3, this)">
+                Independente e tranquilo(a)
+            </button>
+
+            <button onclick="responder('Garnet', 3, this)">
+                Determinado(a) e confiante
+            </button>
+        </section>
+
+
+        <section class="pergunta">
+            <h2>4. Quando alguma coisa dá errado, você...</h2>
+
+            <button onclick="responder('Steven', 4, this)">
+                Penso: "Calma, a gente consegue resolver."
+            </button>
+
+            <button onclick="responder('Amethyst', 4, this)">
+                Dou risada e tento não me preocupar.
+            </button>
+
+            <button onclick="responder('Lapis', 4, this)">
+                Prefiro me afastar e pensar sozinho(a).
+            </button>
+
+            <button onclick="responder('Pearl', 4, this)">
+                Analiso o problema e procuro uma solução.
+            </button>
+        </section>
+
+
+        <section class="pergunta">
+            <h2>5. Escolha um lugar para passar o dia:</h2>
+
+            <button onclick="responder('Steven', 5, this)">
+                Praia com meus amigos
+            </button>
+
+            <button onclick="responder('Amethyst', 5, this)">
+                Um lugar cheio de coisas divertidas
+            </button>
+
+            <button onclick="responder('Lapis', 5, this)">
+                Um lugar tranquilo e isolado
+            </button>
+
+            <button onclick="responder('Garnet', 5, this)">
+                Uma cidade cheia de aventuras
+            </button>
+        </section>
+
+
+        <section class="pergunta">
+            <h2>6. Como você demonstra que gosta de alguém?</h2>
+
+            <button onclick="responder('Steven', 6, this)">
+                Fazendo a pessoa se sentir acolhida.
+            </button>
+
+            <button onclick="responder('Amethyst', 6, this)">
+                Fazendo a pessoa rir.
+            </button>
+
+            <button onclick="responder('Lapis', 6, this)">
+                Estando presente quando ela precisa.
+            </button>
+
+            <button onclick="responder('Pearl', 6, this)">
+                Ajudando e cuidando dos detalhes.
+            </button>
+        </section>
+
+
+        <section class="pergunta">
+            <h2>7. Qual seria seu maior defeito?</h2>
+
+            <button onclick="responder('Steven', 7, this)">
+                Me preocupo demais com os outros.
+            </button>
+
+            <button onclick="responder('Amethyst', 7, this)">
+                Às vezes ajo sem pensar.
+            </button>
+
+            <button onclick="responder('Lapis', 7, this)">
+                Posso me fechar emocionalmente.
+            </button>
+
+            <button onclick="responder('Pearl', 7, this)">
+                Posso ser perfeccionista demais.
+            </button>
+        </section>
+
+
+        <section class="pergunta">
+            <h2>8. Se alguém te irrita, você...</h2>
+
+            <button onclick="responder('Steven', 8, this)">
+                Tento conversar e resolver.
+            </button>
+
+            <button onclick="responder('Amethyst', 8, this)">
+                Faço uma piada e finjo que não ligo.
+            </button>
+
+            <button onclick="responder('Lapis', 8, this)">
+                Me afasto da pessoa.
+            </button>
+
+            <button onclick="responder('Garnet', 8, this)">
+                Falo diretamente o que está me incomodando.
+            </button>
+        </section>
+
+
+        <section class="pergunta">
+            <h2>9. Escolha uma vibe:</h2>
+
+            <button onclick="responder('Steven', 9, this)">
+                "Tudo vai ficar bem."
+            </button>
+
+            <button onclick="responder('Amethyst', 9, this)">
+                "Vamos fazer alguma coisa divertida!"
+            </button>
+
+            <button onclick="responder('Lapis', 9, this)">
+                "Só quero paz."
+            </button>
+
+            <button onclick="responder('Garnet', 9, this)">
+                "Eu sei exatamente o que estou fazendo."
+            </button>
+        </section>
+
+
+        <section class="pergunta">
+            <h2>10. Qual dessas frases combina mais com você?</h2>
+
+            <button onclick="responder('Steven', 10, this)">
+                "Eu quero ajudar todo mundo."
+            </button>
+
+            <button onclick="responder('Amethyst', 10, this)">
+                "Eu faço as coisas do meu jeito."
+            </button>
+
+            <button onclick="responder('Lapis', 10, this)">
+                "Preciso de um pouco de espaço."
+            </button>
+
+            <button onclick="responder('Garnet', 10, this)">
+                "Se for para fazer, vamos fazer direito."
+            </button>
         </section>
 
 
         <section id="resultado">
-
         </section>
 
     </main>
 
-
     <script src="script.js"></script>
 
 </body>
-
 </html>

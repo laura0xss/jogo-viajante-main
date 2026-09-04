@@ -1,63 +1,79 @@
-let aventura = 0;
-let relax = 0;
+let pontos = {
+    Steven: 0,
+    Amethyst: 0,
+    Lapis: 0,
+    Pearl: 0,
+    Garnet: 0
+};
 
-let pergunta1Respondida = false;
-let pergunta2Respondida = false;
+let perguntasRespondidas = 0;
 
+function responder(personagem, numeroPergunta, botao) {
 
-function responder(tipo, pergunta, botao) {
-
-    if (pergunta === 1 && pergunta1Respondida === false) {
-
-        if (tipo === "aventura") {
-            aventura++;
-        } else {
-            relax++;
-        }
-
-        pergunta1Respondida = true;
-
-        botao.classList.add("selecionado");
+    // Evita responder a mesma pergunta duas vezes
+    if (botao.parentElement.classList.contains("respondida")) {
+        return;
     }
 
+    pontos[personagem]++;
+    perguntasRespondidas++;
 
-    if (pergunta === 2 && pergunta2Respondida === false) {
+    // Marca a pergunta como respondida
+    botao.parentElement.classList.add("respondida");
 
-        if (tipo === "aventura") {
-            aventura++;
-        } else {
-            relax++;
-        }
+    // Destaca a resposta escolhida
+    botao.classList.add("selecionado");
 
-        pergunta2Respondida = true;
-
-        botao.classList.add("selecionado");
+    // Se respondeu todas as perguntas
+    if (perguntasRespondidas === 10) {
+        mostrarResultado();
     }
+}
 
+function mostrarResultado() {
 
-    if (pergunta1Respondida === true &&
-        pergunta2Respondida === true) {
+    let personagem = Object.keys(pontos).reduce(function(a, b) {
+        return pontos[a] > pontos[b] ? a : b;
+    });
 
-        const resultado =
-            document.getElementById("resultado");
+    let resultado = document.getElementById("resultado");
 
-        if (aventura > relax) {
+    let mensagens = {
 
-            resultado.textContent =
-                "Você é um viajante aventureiro!";
+        Steven: `
+            <h2>💗 Você é o Steven!</h2>
+            <p>Você é carinhoso, empático e sempre tenta ajudar quem está ao seu redor. 
+            Você acredita que as pessoas podem resolver seus problemas juntas!</p>
+        `,
 
-        } else if (relax > aventura) {
+        Amethyst: `
+            <h2>💜 Você é a Amethyst!</h2>
+            <p>Você é divertido, espontâneo e não tem medo de ser você mesmo. 
+            Adora se divertir e transformar qualquer situação em uma aventura.</p>
+        `,
 
-            resultado.textContent =
-                "Você é um viajante que gosta de relaxar!";
+        Lapis: `
+            <h2>💙 Você é a Lapis Lazuli!</h2>
+            <p>Você é independente, sensível e valoriza muito sua liberdade. 
+            Às vezes prefere ficar sozinho, mas se importa profundamente com quem ama.</p>
+        `,
 
-        } else {
+        Pearl: `
+            <h2>🤍 Você é a Pearl!</h2>
+            <p>Você é responsável, cuidadoso e perfeccionista. 
+            Quando alguém precisa de ajuda, você sempre tenta encontrar a melhor solução.</p>
+        `,
 
-            resultado.textContent =
-                "Você gosta tanto de aventura quanto de relaxar!";
+        Garnet: `
+            <h2>❤️ Você é a Garnet!</h2>
+            <p>Você é confiante, determinado e sabe exatamente quem é. 
+            É uma pessoa forte que valoriza a confiança, o amor e a união.</p>
+        `
+    };
 
-        }
+    resultado.innerHTML = mensagens[personagem];
 
-    }
-
+    resultado.scrollIntoView({
+        behavior: "smooth"
+    });
 }
