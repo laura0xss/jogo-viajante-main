@@ -53,18 +53,21 @@ function mostrarResultado() {
         `,
 
         Lapis: `
+         <img src="imagems/lapis.png" alt="Lapis Lazuli" style="width: 200px; height: auto;">
             <h2>💙 Você é a Lapis Lazuli!</h2>
             <p>Você é independente, sensível e valoriza muito sua liberdade. 
             Às vezes prefere ficar sozinho, mas se importa profundamente com quem ama.</p>
         `,
 
         Pearl: `
+        <img src="imagems/perola.png" alt="Pearl" style="width: 200px; height: auto;">
             <h2>🤍 Você é a Pearl!</h2>
             <p>Você é responsável, cuidadoso e perfeccionista. 
             Quando alguém precisa de ajuda, você sempre tenta encontrar a melhor solução.</p>
         `,
 
         Garnet: `
+            <img src="imagems/garnet.png" alt="Garnet" style="width: 200px; height: auto;">
             <h2>❤️ Você é a Garnet!</h2>
             <p>Você é confiante, determinado e sabe exatamente quem é. 
             É uma pessoa forte que valoriza a confiança, o amor e a união.</p>
