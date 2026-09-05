@@ -41,14 +41,14 @@ function mostrarResultado() {
     let mensagens = {
 
         Steven: `
-            <img src="img/1.png" alt="Steven Universe" style="width: 200px; height: auto;">'
+            <img src="img/steven.png" alt="Steven Universe" style="width: 200px; height: auto;">'
             <h2>💗 Você é o Steven!</h2>
             <p>Você é carinhoso, empático e sempre tenta ajudar quem está ao seu redor. 
             Você acredita que as pessoas podem resolver seus problemas juntas!</p>
         `,
 
         Amethyst: `
-            <img src="img/2.png" alt="Amethyst" style="width: 200px; height: auto;">            
+            <img src="img/amestista.png" alt="Amethyst" style="width: 200px; height: auto;">            
             <h2>💜 Você é a Amethyst!</h2>
             <p>Você é divertido, espontâneo e não tem medo de ser você mesmo. 
             Adora se divertir e transformar qualquer situação em uma aventura.</p>
@@ -76,9 +76,19 @@ function mostrarResultado() {
         `
     };
 
+
     resultado.innerHTML = mensagens[personagem];
 
     resultado.scrollIntoView({
         behavior: "smooth"
     });
 }
+function reiniciarJogo() {
+    pontos = {
+        Steven: 0,
+        Amethyst: 0,
+        Lapis: 0,
+        Pearl: 0,
+        Garnet: 0
+    };
+    perguntasRespondidas = 0;}
